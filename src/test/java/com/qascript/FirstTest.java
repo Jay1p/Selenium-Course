@@ -30,9 +30,9 @@ public class FirstTest {
         options.addArguments("headless");
         options.addArguments("disable-gpu");
         driver = new ChromeDriver(options);
-        driver.get("https://www.firefox.com");
+        driver.get("https://www.youtube.com");
         System.out.println("Title of the page is: " + driver.getTitle());
-        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Firefox"));
+        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Youtube"));
     }
 
 }
