@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class FirstTest {
 
@@ -24,9 +25,9 @@ public class FirstTest {
     
     @Test
     public void openPageUsingFirefox() {
-        System.setProperty("webdriver.gecko.driver", "/path/to/firefox");
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
         WebDriver driver = new FirefoxDriver();
-        driver.get("http://eliasnogueira.com");
+        driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
         Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Firefox"));
     }
