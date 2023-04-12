@@ -22,6 +22,15 @@ public class FirstTest {
         Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
     }
     
+    @Test
+    public void openPageUsingFirefox() {
+        System.setProperty("webdriver.gecko.driver", "/path/to/firefox");
+        WebDriver driver = new FirefoxDriver();
+        driver.get("http://eliasnogueira.com");
+        System.out.println("Title of the page is: " + driver.getTitle());
+        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Firefox"));
+    }
+    
 }
 
 
